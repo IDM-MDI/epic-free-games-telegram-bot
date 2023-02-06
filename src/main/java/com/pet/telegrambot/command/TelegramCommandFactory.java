@@ -17,7 +17,7 @@ public class TelegramCommandFactory {
         if(!MessageValidator.isCommand(message)) {
             return commandMap.get(NOT_COMMAND);
         }
-        String commandName = message.substring(1, message.length() - 1) + COMMAND;
+        String commandName = message.substring(1, message.length()) + COMMAND;
         TelegramCommand telegramCommand = commandMap.get(commandName);
         return Objects.isNull(telegramCommand) ? commandMap.get(NOT_COMMAND) : telegramCommand;
     }
