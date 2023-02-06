@@ -16,6 +16,6 @@ public class WelcomeCommand extends TelegramCommand {
 
     @Override
     public List<BotApiMethodMessage> execute(long chatId) {
-
+        return null;
     }
 }

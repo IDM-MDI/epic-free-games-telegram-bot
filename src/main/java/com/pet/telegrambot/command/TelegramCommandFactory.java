@@ -10,13 +10,15 @@ import java.util.Objects;
 @Component
 @RequiredArgsConstructor
 public class TelegramCommandFactory {
-    private static final String NOT_COMMAND = "notCommand";
+    private static final String COMMAND = "Command";
+    private static final String NOT_COMMAND = "not" + COMMAND;
     private final Map<String,TelegramCommand> commandMap;
     public TelegramCommand createCommand(String message) {
         if(!MessageValidator.isCommand(message)) {
-            return
+            return commandMap.get(NOT_COMMAND);
         }
-        TelegramCommand telegramCommand = commandMap.get(message.substring(1, message.length() - 1));
+        String commandName = message.substring(1, message.length() - 1) + COMMAND;
+        TelegramCommand telegramCommand = commandMap.get(commandName);
         return Objects.isNull(telegramCommand) ? commandMap.get(NOT_COMMAND) : telegramCommand;
     }
 }
