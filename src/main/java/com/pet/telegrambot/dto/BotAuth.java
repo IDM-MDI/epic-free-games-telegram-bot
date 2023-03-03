@@ -1,4 +1,4 @@
-package com.pet.telegrambot.config;
+package com.pet.telegrambot.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

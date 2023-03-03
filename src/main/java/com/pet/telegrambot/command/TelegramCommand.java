@@ -12,5 +12,4 @@ import java.util.List;
 public abstract class TelegramCommand {
     private final MessageService messageService;
     public abstract List<BotApiMethodMessage> execute(long chatId);
-
 }

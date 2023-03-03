@@ -1,7 +1,7 @@
 package com.pet.telegrambot.service;
 
 import com.pet.telegrambot.command.TelegramCommandFactory;
-import com.pet.telegrambot.config.BotAuth;
+import com.pet.telegrambot.dto.BotAuth;
 import com.pet.telegrambot.validator.MessageValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
